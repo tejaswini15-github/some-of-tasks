@@ -1,0 +1,551 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+} 
+/* Sticky header */
+.header {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 10px 20px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+    margin-bottom: 0;
+}
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+/* Bottom section for logo, menu-icon, and nav-links */
+.header-bottom {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* margin-top: 0px; */
+}
+.menu-icon {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    margin-right: 15px;
+    padding: 10px;
+}
+/* .logo  {
+    
+    display: flex;
+    
+} */
+/* Logo and Nav Links */
+.logo img {
+    height: 50px;
+    /* margin-left: 10px;      */
+}
+.nav-links {
+    display: flex;
+    /* justify-content: flex-end; */
+    gap: 12px;
+    margin-left: auto;
+    /* margin-left: -85%;
+    margin-bottom: -2%; */
+}
+.nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.4rem;
+    font-variant: small-caps; 
+    font-family: 'Times New Roman', Times, serif;
+}
+.nav-links a:hover {
+    color: #800000;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+    width: 150px;
+}
+
+.search-bar button {
+    background-color: #E0AE0A;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 10px;
+    margin-right: 0%;
+}
+.header-right a {
+   text-decoration: none;
+   color: black;
+}
+.pink-clock {
+    font-size: 2rem ;
+    color: #8A152D;
+}  
+.header-right .gold-rate {
+    margin-left: 15px;
+    font-size: 14px;
+    color: #333;
+}
+.header-right .icon {
+    /* margin-left: 15px; */
+    font-size: 18px;
+    color: #800000;
+    cursor: pointer;
+}
+.header-right {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+.header-right a {
+    font-family: "Georgia", serif;
+    font-size: 14px; 
+    color: black;
+    text-decoration: none;
+}
+.header-right i.fa-regular.fa-clock {
+    font-size: 2rem ;
+    color: #8A152D;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0; /* Invisible */
+    }
+}
+/* Modal Styles */
+#menu-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 1000;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+/* Show modal when targeted */
+#menu-modal:target {
+    display: flex;
+}
+
+/* Menu Content */
+.menu-content {
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.menu-img {
+    margin-left: -11%;
+}
+/* Columns Styling */
+.menu-content .column {
+    flex: 1;
+    min-width: 150px; 
+}
+
+.menu-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+
+}
+
+.menu-content a {
+    color: rgb(129, 123, 123);
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Close Button */
+.close-icon {
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 40px; 
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Carousel container */
+#hero-carousel {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.carousel-inner {
+    height: 100%;
+    width: 100%; /* Match the carousel's height */
+}
+
+.c-item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fit perfectly without distortion */
+    display: block;
+}
+
+/* Previous & Next button styles */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background to buttons */
+    border-radius: 50%;
+    z-index: 10; /* Ensure buttons are on top of other elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    background-size: 100%; /* Fit the icon within the button */
+    filter: invert(1); /* Makes icons white for visibility */
+}
+
+/* Indicator styles */
+.carousel-indicators {
+    bottom: 20px; /* Adjust for better positioning */
+}
+
+.carousel-indicators .active {
+    background-color: #8A152D;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    background-color: #8A152D;
+    border-radius: 50%;
+    border: none; /* Remove default border */
+}
+
+/* Adjust styles for medium screens (tablet) */
+@media (min-width: 576px) and (max-width: 990px) {
+    #hero-carousel {
+        height: 75vh; /* Slightly smaller height for medium screens */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 30px;
+        height: 30px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-size: 90%;
+    }
+
+    .carousel-indicators {
+        bottom: 15px; /* Adjust indicator position */
+    }
+
+    .carousel-indicators button {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Adjust styles for small screens (mobile) */
+@media (min-width: 53px) and  (max-width: 575px) {
+    #hero-carousel {
+        height: 70vh; /* Reduce carousel height */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 35px; /* Smaller buttons */
+        height: 35px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-size: 80%;
+    }
+
+    .carousel-indicators {
+        bottom: 10px; /* Adjust indicator position */
+    }
+
+    .carousel-indicators button {
+        width: 6px;
+        height: 6px;
+    }
+    .carousel-container {
+        width: 100%;
+        padding: 0; /* Optional: Adjust if needed */
+    }
+    
+      /* Scale down the images inside the carousel */
+    .carousel-item img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        max-width: 100%; /* Ensure the image does not exceed its container's width */
+    }
+}
+
+/* .image-gallery {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 100vw;
+    max-width: 1300px;
+    margin: auto;
+    grid-template-areas: 
+      "a a b c d"
+      "e f b g g";
+  }
+.a {
+     grid-area: a; 
+}
+.b {
+     grid-area: b; 
+}
+.c {
+     grid-area: c; 
+}
+.d {
+     grid-area: d; 
+}
+.e {
+     grid-area: e; 
+}
+.f {
+    grid-area: f; 
+}
+.g {
+    grid-area: g;  
+}
+.image-gallery img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    position: relative;
+}
+.image-gallery > div {
+    position: relative; 
+    overflow: hidden; 
+}
+.heading h1 {
+   font-size: 2.5rem;
+   color: black;
+   text-align: center;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: normal;
+   font-variant: small-caps;
+   margin: 20px 0;
+}
+.heading h1 span {
+    font-size: 2.5rem;
+    color: #8A152D;
+    font-weight: bold;
+}
+/* part-2*/
+/* .pictures {
+    position: absolute;
+    bottom: -100%; 
+    left: 0;
+    width: 100%;
+    height: 218px;
+    background-color: #8A152D; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    transition: all 0.4s ease;
+    /* opacity: 0; */
+}
+.pictures p {
+    font-family: 'Georgia', serif;
+    font-size: 1rem; 
+    color: white; 
+}
+.image-gallery > div:hover .pictures {
+    bottom: 0; /* 
+    /* opacity: 1; */
+}
+.pictures img {
+    width: 100px;
+    height: 70px;
+}
+/* gift-picture */
+.gift h1 {
+    font-size: 2.5rem;
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-variant: small-caps;
+    margin: 20px 0;
+    margin-top: 2%;
+    margin-bottom: -2%;
+}
+.gift-image img {
+    width: 100vw;
+    /* height: 60vh; */
+    padding: 4%;
+    /* object-fit: cover; */
+}
+.paragraph-gallery {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.head h1 {
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-variant: small-caps;
+    margin-bottom: 10%;
+}
+.some-para {
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.know-more button{
+    width: 170px;
+    height: 40px;
+    color: #333;
+}
+.know-more button:hover {
+    background-color: #8A152D;
+}
+.know-more  a{
+    text-decoration: none;
+    color: black;
+}
+.know-more button a:hover {
+    background-color: #8A152D;
+    color: white;
+}
+/* iframe-gallery */
+/*.iframe-gallery {
+    width: 100vw;
+    max-width: 1300px;
+    margin: auto;
+    padding: 40px;
+}
+.images {
+    display: grid; 
+    grid-template-columns: 2fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    /* width: 100vw; */
+    /* max-width: 1300px; */
+   /* margin: auto;
+    grid-template-areas: 
+      'a a b c d'
+      'a a e f g';
+}
+.a {
+     grid-area: a; 
+}
+.b {
+     grid-area: b; 
+}
+.c {
+     grid-area: c; 
+}
+.d {
+     grid-area: d; 
+}
+.e {
+     grid-area: e; 
+}
+.f {
+     grid-area: f; 
+}
+.g {
+     grid-area: g; 
+}
+.images div {
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.images img {
+    width: 364px;
+    height: 363px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left-width: 0;
+} */
+
+/* .images iframe {
+    width: 560px;
+    height: 615px;
+} */ */

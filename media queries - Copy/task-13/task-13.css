@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button {
+    width: 150px;
+    height: 80px;
+    color: #000;
+    background-color: palevioletred;
+    border-radius: 20px;
+    margin: 20px;
+}
+@media screen and (width < 600px){
+    button{
+      display: none;
+   }
+}

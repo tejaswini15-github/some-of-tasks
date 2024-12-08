@@ -1,0 +1,42 @@
+html ,
+body {
+    height: 100%;
+} 
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+} */
+div {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    animation-name: colorchanging;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: ease;
+}    
+@keyframes colorchanging {
+    0% {
+        background-color: lightcoral;
+        transform: translate(0px,0px);
+    }
+    25% {
+        background-color: lime;
+        transform: translateX(500px);
+    }
+    50% {
+        background-color: lightcoral;
+        transform: translateX(500px,500px);
+    }
+    75% {
+        background-color: lime;
+        transform: translateY(500px);
+    }
+    100% {
+        background-color: blue;
+        transform: translate(0px,0px);
+    }
+}

@@ -1,0 +1,109 @@
+.cat-container>.cat-picture {
+    display: none;
+    height: 0px;
+    width: 300px;
+    transition: all 0.5s ease;
+}
+.dog-container>.dog-picture {
+    display: none;
+    height: 0px;
+    width: 300px;
+    transition: all 0.5s ease;
+}
+.snake-container>.snake-picture {
+    display: none;
+    height: 0px;
+    width: 300px;
+    transition: all 0.5s ease;
+}
+.rabbit-container>.rabbit-picture {
+    display: none;
+    height: 0px;
+    width: 300px;
+    transition: all 0.5s ease;
+}
+container {
+    margin: 20px auto;
+    align-items: center;
+}
+.cat-container ,
+.dog-container ,
+.snake-container ,
+.rabbit-container {
+    margin: 30px 30px;
+    margin-top: 100px;
+    display:inline-block;
+    width: 200px;
+    height: 300px;
+    margin-left: 50px;
+    align-items: center;
+}
+.cat-picture ,
+.dog-picture ,
+.snake-picture,
+.rabbit-picture {
+    height: 300px;
+    width: 50px;
+    margin: 0;  
+    position: absolute;
+    left: 25%;
+    top: 50%;
+}
+/*.snake-picture {
+    position:absolute;
+    left: 25%;
+    top: 50%;
+}*/
+.cat-button ,
+.dog-button ,
+.snake-button ,
+.rabbit-button {
+    padding: 10px;
+    border: 0;
+    font-size: 20px;
+    display: inline-block;
+    width: 150px;
+    height: 36px;
+    margin: 50px ;
+}
+/*.cat-picture {
+    margin-left: 150px;
+    margin-bottom: 100px;
+}
+.dog-picture {
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+.snake-picture {
+    margin-left: 50px;
+    margin-bottom: 100px;
+}
+.rabbit-picture {
+    margin-left: 20px;
+    margin-bottom: 100px;
+}*/
+.cat-button:hover~.cat-picture {
+    display: block;
+    height: 220px;
+    width: 500px;
+}
+.dog-button:hover~.dog-picture{
+    display: block;
+    height: 220px;
+    width: 500px;
+}
+.snake-button:hover~.snake-picture{
+    display: block;
+    height: 220px;
+    width: 500px;
+} 
+.rabbit-button:hover~.rabbit-picture {
+    display: block;
+    height: 220px;
+    width: 500px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

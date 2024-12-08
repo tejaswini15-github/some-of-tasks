@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+     display: flex;
+     justify-content: space-between;
+     gap: 10px;
+     height: 80px;
+     border: 2px solid;
+     background-color: violet;
+     font-size: 32px;
+     padding: 10px;
+     margin: 10px;
+}
+@media screen and (width < 500px){
+    nav{
+      display: none;
+   }
+}

@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height to center the flex container */
+    margin: 0;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    height: 400px; /* Container height greater than the content */
+    border: 2px solid #333;
+    padding: 10px;
+    background-color: #f0f0f0;
+  
+    /* Experiment with align-items and align-content */
+    align-items: center; /* Change this to flex-start, stretch, etc. */
+    align-content: space-between; /* Change to center, flex-start, etc. */
+  }
+  
+  .flex-child {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+  }
+  

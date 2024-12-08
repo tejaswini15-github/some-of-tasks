@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex-container {
+    display: flex;
+    height: 100vw;
+    width: 100vw;
+    border: 2px solid red;
+    padding: 0; 
+    background-color: #e8e8e9; 
+}
+.flex-child {
+    background-color: #8cacea;  
+    height: 150px; 
+    margin: 8px; 
+    padding: 4px; 
+}
+.item-1 {
+    flex-shrink: 2;
+    width: 200px;
+}
+.item-2  {
+    flex-shrink: 1;
+    width: 150px;
+}
+.item-3  {
+    flex-shrink: 1;
+    width: 120px;
+}
+.item-4  {
+    flex-shrink: 1;
+    width: 100px;
+}

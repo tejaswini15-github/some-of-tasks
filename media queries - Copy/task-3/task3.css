@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 400px;
+    height: 400px;
+}
+@media screen and (orientation : portrait) {
+    .container{
+      background-color: green;
+   }
+}
+@media screen and (orientation : landscape) {
+    .container{
+      background-color: red;
+   }
+}

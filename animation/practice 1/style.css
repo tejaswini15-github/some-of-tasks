@@ -1,0 +1,27 @@
+html ,
+body {
+    height: 100%;
+} 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+div {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    animation-name: colorchanging;
+    animation-duration: 4s;
+}    
+@keyframes colorchanging {
+    from {
+        background-color: lightcoral;
+        transform: translateY(-100PX);
+    }
+    to {
+        background-color: lime;
+        transform: translateY(100PX);
+    }
+}

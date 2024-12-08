@@ -1,0 +1,911 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 10px 20px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+    margin-bottom: 0;
+}
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+/* Bottom section for logo, menu-icon, and nav-links */
+.header-bottom {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* margin-top: 0px; */
+}
+.menu-icon {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    margin-right: 15px;
+    padding: 10px;
+}
+/* .logo  {
+    
+    display: flex;
+    
+} */
+/* Logo and Nav Links */
+.logo img {
+    height: 50px;
+    /* margin-left: 10px;      */
+}
+.nav-links {
+    display: flex;
+    /* justify-content: flex-end; */
+    gap: 12px;
+    margin-left: auto;
+    /* margin-left: -85%;
+    margin-bottom: -2%; */
+}
+.nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.4rem;
+    font-variant: small-caps; 
+    font-family: 'Times New Roman', Times, serif;
+}
+.nav-links a:hover {
+    color: #800000;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+    width: 150px;
+}
+
+.search-bar button {
+    background-color: #E0AE0A;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 10px;
+    margin-right: 0%;
+}
+.header-right a {
+   text-decoration: none;
+   color: black;
+}
+.pink-clock {
+    font-size: 2rem ;
+    color: #8A152D;
+}  
+.header-right .gold-rate {
+    margin-left: 15px;
+    font-size: 14px;
+    color: #333;
+}
+.header-right .icon {
+    /* margin-left: 15px; */
+    font-size: 18px;
+    color: #800000;
+    cursor: pointer;
+}
+.header-right {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+.header-right a {
+    font-family: "Georgia", serif;
+    font-size: 14px; 
+    color: black;
+    text-decoration: none;
+}
+.header-right i.fa-regular.fa-clock {
+    font-size: 2rem ;
+    color: #8A152D;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0; /* Invisible */
+    }
+}
+/* Modal Styles */
+#menu-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Show modal when targeted */
+#menu-modal:target {
+    display: flex;
+}
+
+/* Menu Content */
+.menu-content {
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.menu-img {
+    margin-left: -11%;
+}
+/* Columns Styling */
+.menu-content .column {
+    flex: 1;
+    min-width: 150px; 
+}
+
+.menu-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+
+}
+
+.menu-content a {
+    color: rgb(129, 123, 123);
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Close Button */
+.close-icon {
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 40px; 
+    text-decoration: none;
+    cursor: pointer;
+}
+/* main-section */
+.c-item {
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+  
+   
+/* main-section */
+.c-item {
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+.carousel-indicators button {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 80%; 
+    background-color: #ccc; 
+    /* border: none; 
+    opacity: 1;  */
+    /* margin: 0 4px;  */
+    transition: background-color 0.3s ease;
+}
+.carousel-indicators button.active {
+    background-color: #8A152D; 
+}
+.image-gallery {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 100vw;
+    max-width: 1300px;
+    margin: auto;
+    grid-template-areas: 
+      'a a b c d'
+      'e f b g g';
+  }
+.a {
+     grid-area: a; 
+}
+.b {
+     grid-area: b; 
+}
+.c {
+     grid-area: c; 
+}
+.d {
+     grid-area: d; 
+}
+.e {
+     grid-area: e; 
+}
+.f {
+    grid-area: f; 
+}
+.g {
+    grid-area: g;  
+}
+.image-gallery img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    position: relative;
+}
+.image-gallery > div {
+    position: relative; 
+    overflow: hidden; 
+}
+.heading h1 {
+   font-size: 2.5rem;
+   color: black;
+   text-align: center;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: normal;
+   font-variant: small-caps;
+   margin: 20px 0;
+}
+.heading h1 span {
+    font-size: 2.5rem;
+    color: #8A152D;
+    font-weight: bold;
+}
+/* part-2*/
+.pictures {
+    position: absolute;
+    bottom: -100%; 
+    left: 0;
+    width: 100%;
+    height: 218px;
+    background-color: #8A152D; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    transition: all 0.4s ease;
+    /* opacity: 0; */
+}
+.pictures p {
+    font-family: 'Georgia', serif;
+    font-size: 1rem; 
+    color: white; 
+}
+.image-gallery > div:hover .pictures {
+    bottom: 0; /* 
+    /* opacity: 1; */
+}
+.pictures img {
+    width: 100px;
+    height: 70px;
+}
+/* gift-picture */
+.gift h1 {
+    font-size: 2.5rem;
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-variant: small-caps;
+    margin: 20px 0;
+    margin-top: 2%;
+    margin-bottom: -2%;
+}
+.gift-image img {
+    width: 100vw;
+    /* height: 60vh; */
+    padding: 4%;
+    /* object-fit: cover; */
+}
+.paragraph-gallery {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.head h1 {
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-variant: small-caps;
+    margin-bottom: 10%;
+}
+.head h1 span {
+    color: #8A152D;
+}
+.some-para {
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.know-more button{
+    width: 170px;
+    height: 40px;
+    color: #333;
+}
+.know-more button:hover {
+    background-color: #8A152D;
+}
+.know-more  a{
+    text-decoration: none;
+    color: black;
+}
+.know-more button a:hover {
+    background-color: #8A152D;
+    color: white;
+}
+.social-media {
+     padding: 100px; 
+}
+.insta-youtube {
+    display: grid;
+    grid-template-areas:
+        "iframe-box iframe-box  box1 box2 box3"
+        "iframe-box iframe-box box4 box5 box6";
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 2%;
+   
+}
+
+.iframe-box {
+    grid-area: iframe-box;
+}
+.iframe-box iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.image-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.box1 {
+     grid-area: box1; 
+}
+.box2 {
+     grid-area: box2; 
+}
+.box3 {
+     grid-area: box3; 
+}
+.box4 {
+     grid-area: box4; 
+}
+.box5 {
+     grid-area: box5; 
+}
+.box6 {
+     grid-area: box6; 
+}
+.socialmedia-heading {
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-variant: small-caps;
+    color: #8A152D;
+}
+/* Footer styling */
+.footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.footer-column a:hover {
+    color: #666;
+}
+
+/* Payment and Social Icons */
+.footer-payment, .footer-social {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+.footer-payment img, .footer-social img {
+    margin: 0 5px;
+    height: 24px;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-color: white;
+    border: 1px;
+}
+
+.footer-bottom a {
+    margin: 10px;
+    color: #333;
+    text-decoration: none;
+}
+.footer-bottom a:hover {
+    color: #666;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.visa-social icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-payment {
+    display: flex;
+    align-items: center;
+    gap: 45px; 
+}  
+.footer-payment img {
+    width: 170px; 
+    margin-right: 13%;
+    height: 30px;
+}
+.footer-social a {
+    margin: 0 10px; /* Add spacing between social icons */
+    font-size: 24px;
+}
+.footer-payment i.fa-brands.fa-facebook,
+.footer-payment i.fa-brands.fa-instagram,
+.footer-payment i.fa-brands.fa-x-twitter,
+.footer-payment i.fa-brands.fa-pinterest,
+.footer-payment i.fa-brands.fa-youtube,
+.footer-payment i.fa-brands.fa-linkedin{
+    font-size: 2rem ;
+    color: #ccc;
+}
+.payment-head {
+    margin-top: -1.4%;
+    text-align: center;
+}
+.socialicon-head {
+    
+    text-align: center;
+}
+.last-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+.last-line-symbols {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap as needed */
+}
+.last-line-symbols a {
+    font-family: "Georgia", serif;
+    font-size: 18px; 
+    color: black;
+    text-decoration: none;
+}
+.last-line-symbols i.fa-regular.fa-clock {
+    font-size: 2rem ;
+    color: #8A152D;
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyalukkas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header-top">
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-right">
+                    <a href="#">Gold Rate</a>
+                    <a href="#">Stores</a>
+                    <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+                    <a href="#"><i class="fa-solid fa-flag"></i></a>
+                    <a href="#"><i class="fa-regular fa-clock pink-clock"></i></a>
+                    
+                </div>
+            </div>
+            <div class="header-bottom">
+                <!-- Menu Icon and Logo -->
+                <a href="#menu-modal" class="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </a>
+        
+    
+                <div class="logo">
+                    <img src="./logo joyalukkas.png" alt="Joyalukkas">
+    
+                </div>
+                <div class="nav-links">
+                    <a href="#">Collections</a>
+                    <a href="#">Promotions</a>
+                    <a href="#">Privileges</a>
+                    <a href="#">Gifting</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Custom Modal for Menu -->
+    <div id="menu-modal">
+        <div class="menu-content">
+            <a href="#" class="close-icon">&times;</a>
+            <div class="menu-img"> <img src="./logo joyalukkas.png" width="150px" height="50px" alt="logo"></div>
+            <div class="column">
+                <a href="#">LEGACY</a>
+                <a href="#">LOYALTY</a>
+                <a href="#">MEDIA</a>
+                <a href="#">CONTACT</a>
+            </div>
+            <div class="column">
+                <h3>Promotions</h3>
+                <a href="#">Current Promotions</a>
+                <a href="#">Installment Plans</a>
+                <a href="#">Earn & Redeem</a>
+                <h3>Gifting</h3>
+                <a href="#">E-Message Gifting</a>
+                <a href="#">Corporate Gifting</a>
+            </div>
+            <div class="column">
+                <h3>Gold</h3>
+                <a href="#">Apurva</a>
+                <a href="#">Veda</a>
+                <a href="#">Ratna</a>
+                <a href="#">Zenina</a>
+                <a href="#">Joy18</a>
+                <a href="#">Lil Joy</a>
+            </div>
+            <div class="column">
+                <h3>Diamond</h3>
+                <a href="#">Eleganza</a>
+                <a href="#">Pride</a>
+                <h3>Precious Stone</h3>
+                <a href="#">Ratna</a>
+                <h3>Platinum</h3>
+                <a href="#">Perfekt Platino</a>
+            </div>
+            <div class="column">
+                <h3>Pearl</h3>
+                <a href="#">Masaaki</a>
+                <h3>Celebrity</h3>
+            </div>
+            <div class="column">
+                <h3>Bridal</h3>
+                <a href="#">Eleganza Bride</a>
+                <a href="#">Pride Bride</a>
+                <a href="#">Apurva Bride</a>
+                <a href="#">Veda Bride</a>
+                <a href="#">Ratna Bride</a>
+            </div>
+        </div>
+    </div>
+    <!-- main section -->
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators rounded-circle p-1">
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active rounded-circle p-1 "  aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" class="rounded-circle p-1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" class="rounded-circle p-1"  aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="3" class="rounded-circle p-1" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="4" class="rounded-circle p-1"  aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="5" class="rounded-circle p-1" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="6" class="rounded-circle p-1"  aria-label="Slide 7"></button>
+          </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active c-item">
+            <img src="Joyalukkas-Sita-Kalyanam-Desktop-Banner-1-5.jpg" class="d-block w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="Joyalukkas-Vivid-desktop-Banner-1-6.jpg" class="d-block w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="Joyalukkas-Yuva-Desktop-Banner-1-7.jpg" class="d-block w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="Joyalukkas-modal-desktop-Banner-1-1.jpg" class="d-block w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="JA_WEBSITE-1366-x-768-1-2.jpg" class="d-block w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="05-Desctop 1-3.jpg" class="d-block w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="08-Desktop 1-4.jpg" class="d-block w-100 c-img" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- part-2 image gallery -->
+    <div class="part-2">
+        <div class="heading">
+            <h1>Latest from our <span>Collections</span></h1>
+        </div>
+        <div class="image-gallery">
+            <div class="a"><img src="./ring1.png" alt="Ring 1">
+                <div class="pictures">
+                    <img src="./Bella-logo-498-x-208 (1).png" class="bella-collection" alt="">
+                    <p>The timeless elegance of Joyalukkas' Bella Collection, inspired by the boundless beauty of butterflies.</p>
+                </div> 
+            </div>
+            <div class="b"><img src="./necklace.jpg" alt="Necklace">
+                <div class="pictures">
+                    <img src="./pridelogo2.png" class="pride-collection" alt="">
+                    <p>An eclectic collection of diamond jewellery that mesmerises the senses and dazzles both onlooker and the wearer.</p>
+                </div> 
+            </div>
+            <div class="c"><img src="./ringss.jpg" alt="Rings">
+                <div class="pictures">
+                    <img src="./Spiral_Web_Logo_498x208px.jpg" class="spiral-collection" alt="">
+                    <p>Discover luxury redefined with Spiral- a bold fusion of elegance and strength. Crafted from a single metal without a single seam, these bangles bring the beauty of multiple pieces into one stunning designs.</p>
+                </div> 
+            </div>
+            <div class="d"><img src="./ring 2.jpg" alt="Ring 2">
+                <div class="pictures">
+                    <img src="./Spiral_Web_Logo_498x208px.jpg" class="spiral-collection" alt="">
+                    <p>Discover luxury redefined with Spiral- a bold fusion of elegance and strength. Crafted from a single metal without a single seam, these bangles bring the beauty of multiple pieces into one stunning designs.</p>
+                </div> 
+            </div>
+            <div class="e"><img src="./chain.png" alt="Chain">
+                <div class="pictures">
+                    <img src="./Bella-logo-498-x-208 (1).png" class="bella-collection" alt="">
+                    <p>The timeless elegance of Joyalukkas' Bella Collection, inspired by the boundless beauty of butterflies.</p>
+                </div> 
+            </div> 
+            <div class="f"><img src="./chain2.png" alt="Chain 2">
+                <div class="pictures">
+                    <img src="./Bella-logo-498-x-208 (1).png" class="bella-collection" alt="">
+                    <p>The timeless elegance of Joyalukkas' Bella Collection, inspired by the boundless beauty of butterflies.</p>
+                </div> 
+            </div>
+            <div class="g"><img src="./overall rings.jpg" alt="Overall Rings">
+                <div class="pictures">
+                    <img src="./Spiral_Web_Logo_498x208px.jpg" class="spiral-collection" alt="">
+                    <p>Discover luxury redefined with Spiral- a bold fusion of elegance and strength. Crafted from a single metal without a single seam, these bangles bring the beauty of multiple pieces into one stunning designs.</p>
+                </div> 
+            </div>
+        </div>
+    </div>
+   <!--gift picture -->
+   <div class="gift-picture">
+    <div class="gift">
+        <h1>Gift Cards</h1>
+    </div>
+    <div class="gift-image">
+        <img src="gifts.jpg" alt="">
+    </div>
+   </div>
+   <!-- paragraph-gallery -->
+    <div class="paragraph-gallery">
+        <div class="head">
+            <h1>A Homage to <span>Fine Craftmanship</span></h1>
+        </div>
+        <div class="some-para">
+            <p>For the past two decades, artisans at Joyalukkas Jewellery have crafted enthralling, eclectic and ingenious adornments for the <center> discerning wearer.</center></p>
+            <p>As the world’s favourite jeweller, we create stunning handcrafted pieces inspired by mesmerizing nuances from across the world.<br>
+               <center> Imbibing the true meaning of quality, every detail is etched and executed to perfection.</center>
+            </p>
+            <p>Collections by Joyalukkas Jewellery are diverse, showcasing a splendid convergence of traditional heritage and contemporary <center>aesthetics.</center>
+                <center>Each piece tells a vivid story of artistry, making every moment joyous and exalted.</center></p>
+            <p><center>Delve into the captivating world of Joyalukkas Jewellery, where creativity knows no bounds.</center></p>              
+        </div>
+        <div class="know-more">
+            <button><a href="https://eshop.joyalukkas.com/legacy/" target="_blank">KNOW MORE</a></button>
+        </div>
+    </div>
+    
+    <div class="social-media">
+        <div class="socialmedia-heading">
+            <h1>#Social Media</h1>
+        </div>
+        <div class="insta-youtube">
+            <div class="iframe-box">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dafLgPp91yo?si=axcwxk2XKOEV6vLw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="image-box box1">
+                <a href="https://www.instagram.com/p/C_YVptHymgc/" target="_blank"> <img src="iframe1.png" alt="social-media"></a>
+            </div>
+            <div class="image-box box2">
+                <a href="https://www.instagram.com/p/C-vAtcFSlAf/" target="_blank"><img src="iframe 2.jpg" alt=""></a>
+            </div>
+            <div class="image-box box3">
+                <a href="https://www.instagram.com/p/C8Y5_w3SLQj" target="_blank"><img src="iframe3.jpg" alt=""></a>
+            </div>
+            <div class="image-box box4">
+                <a href="https://www.instagram.com/p/C74X1GISS1X/" target="_blank"><img src="iframe4.jpg" alt=""></a>
+            </div>
+            <div class="image-box box5">
+                <a href="https://www.instagram.com/p/C74XUjzyU6F/" target="_blank"><img src="iframe 5.jpg" alt=""></a>
+            </div>
+            <div class="image-box box6">
+                <a href="https://www.instagram.com/p/C60jpcQCQT5/" target="_blank"><img src="iframe6.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1 -->
+            <div class="footer-column">
+                <h3>Home</h3>
+                <a href="#">Legacy</a>
+                <a href="#">Loyalty</a>
+                <a href="#">Promotions</a>
+            </div>
+    
+            <!-- Column 2 -->
+            <div class="footer-column">
+                <h3>Gold</h3>
+                <a href="#">Platinum</a>
+                <a href="#">Diamond</a>
+                <a href="#">Bridal</a>
+                <a href="#">Pearl</a>
+                <a href="#">Precious Stone</a>
+            </div>
+            <!-- Column 3 -->
+           <div class="footer-column">
+               <h3>Brands</h3>
+               <a href="#">Eleganza</a>
+               <a href="#">Apurva</a>
+               <a href="#">Pride</a>
+               <a href="#">Veda</a>
+               <a href="#">Ratna</a>
+           </div>
+           <div class="footer-column">
+                <h3>Brands</h3>
+                <a href="#">Masaaki</a>
+                <a href="#">Li'l Joy</a>
+                <a href="#">Zenina</a>
+                <a href="#">Joy18</a>
+                <a href="#">Perfekt Platino</a>
+           </div>
+        </div>
+        <div class="visa-social icons">
+            <!-- Payment Icons -->
+            <div class="footer-payment">
+              <div class="payment-head">
+                <h4>WE ACCEPT</h4>
+                <hr>
+                <img src="visa1.png" alt="Visa">
+              </div>
+              <div class="socialicon-head">
+                <h4>FOLLOW US</h4>
+                <hr>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/Joyalukkas/?ref=nf" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/joyalukkas/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/joyalukkas?lang=en" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.pinterest.com/JoyalukkasPins/boards/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="https://www.youtube.com/channel/UC6aWuGnZkF8uZhe-HzR3KRg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/company/joyalukkas/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+               <a href="#">Terms and Conditions</a>
+               <a href="#">Return & Refund Policy</a>
+               <a href="#">Privacy Policy</a>
+        </div>
+        <div class="last-line">
+            <div class="copyright">
+                Copyright 2024 © Joyalukkas. All rights reserved.
+             </div>
+             <div class="last-line-symbols">
+                <a href="#">Stores</a>
+                <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+                <a href="#"><i class="fa-solid fa-flag"></i></a>
+                <a href="#"><i class="fa-regular fa-clock"></i></a>
+             </div>
+        </div>
+    </footer>
+
+  
+
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

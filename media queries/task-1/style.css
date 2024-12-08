@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+}
+@media screen and (width < 600px){
+    .container{
+      background-color: lightblue;
+   }
+}
+@media screen and (width >=600px) and (width <=1024px) {
+    .container {
+        background-color: lightgreen;
+    }
+}

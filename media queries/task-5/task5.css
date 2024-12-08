@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+span {
+    display: inline-block;
+    width: 8opx;
+    height: 30px;
+    border: 2px solid;
+    background-color: rgb(187, 14, 217);
+}
+@media screen and (width < 600px){
+    span {
+      display: block;
+   }
+}

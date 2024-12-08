@@ -1,0 +1,47 @@
+* {
+    font-family: Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+header {
+    height: 100px;
+    text-align: center;
+    color: rgb(130, 86, 171);
+    background-color: rgb(237, 118, 134);
+}
+/*.summary {
+    width: 1100px;
+    margin: 50px auto;
+}*/
+/*.container {
+    width: 80%;
+    margin: 50px;
+}*/
+.sidebar {
+    width: 20vw;
+    height: 100vh;
+    font-size: 30px;
+    font-weight: 1000px;
+    margin-bottom: ;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(33, 23, 226);
+}
+.sidebar ul {
+    padding: 15px;
+    margin-left: 10px;
+}
+.sidebar li {
+    margin: 10px;
+    color: rgba(235, 179, 107, 0.908);
+}
+.paragraph {
+    width: 80vw;
+    padding: 20px;
+    margin-left: 20vw;
+}

@@ -1,0 +1,171 @@
+<header>
+        <div class="header">
+            <!-- Menu Icon and Logo -->
+            <a href="#menu-modal" class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </a>
+    
+            <div class="logo">
+                <img src="logo joyalukkas.png" alt="Joyalukkas">
+            </div>
+    
+            <div class="nav-links">
+                <a href="#">Collections</a>
+                <a href="#">Promotions</a>
+                <a href="#">Privileges</a>
+                <a href="#">Gifting</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Custom Modal for Menu -->
+    <div id="menu-modal">
+        <div class="menu-content">
+            <a href="#" class="close-icon">&times;</a>
+            <div class="menu-img"> <img src="./logo joyalukkas.png" width="150px" height="50px" alt="logo"></div>
+            <div class="column">
+                <a href="#">LEGACY</a>
+                <a href="#">LOYALTY</a>
+                <a href="#">MEDIA</a>
+                <a href="#">CONTACT</a>
+            </div>
+            <div class="column">
+                <h3>Promotions</h3>
+                <a href="#">Current Promotions</a>
+                <a href="#">Installment Plans</a>
+                <a href="#">Earn & Redeem</a>
+                <h3>Gifting</h3>
+                <a href="#">E-Message Gifting</a>
+                <a href="#">Corporate Gifting</a>
+            </div>
+            <div class="column">
+                <h3>Gold</h3>
+                <a href="#">Apurva</a>
+                <a href="#">Veda</a>
+                <a href="#">Ratna</a>
+                <a href="#">Zenina</a>
+                <a href="#">Joy18</a>
+                <a href="#">Lil Joy</a>
+            </div>
+            <div class="column">
+                <h3>Diamond</h3>
+                <a href="#">Eleganza</a>
+                <a href="#">Pride</a>
+                <h3>Precious Stone</h3>
+                <a href="#">Ratna</a>
+                <h3>Platinum</h3>
+                <a href="#">Perfekt Platino</a>
+            </div>
+            <div class="column">
+                <h3>Pearl</h3>
+                <a href="#">Masaaki</a>
+                <h3>Celebrity</h3>
+            </div>
+            <div class="column">
+                <h3>Bridal</h3>
+                <a href="#">Eleganza Bride</a>
+                <a href="#">Pride Bride</a>
+                <a href="#">Apurva Bride</a>
+                <a href="#">Veda Bride</a>
+                <a href="#">Ratna Bride</a>
+            </div>
+        </div>
+
+
+
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.menu-icon {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Logo and Nav Links */
+.logo img {
+    height: 40px;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Modal Styles */
+#menu-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Show modal when targeted */
+#menu-modal:target {
+    display: flex;
+}
+
+/* Menu Content */
+.menu-content {
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.menu-img {
+    margin-left: -11%;
+}
+/* Columns Styling */
+.menu-content .column {
+    flex: 1;
+    min-width: 150px; 
+}
+
+.menu-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+
+}
+
+.menu-content a {
+    color: rgb(129, 123, 123);
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Close Button */
+.close-icon {
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 40px; 
+    text-decoration: none;
+    cursor: pointer;
+}
+    </div>

@@ -1,0 +1,29 @@
+html ,
+body {
+    height: 100%;
+} 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+div {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    animation-name: X;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}    
+@keyframes X {
+    from {
+        background-color: lightcoral;
+        /* transform: translateY(-100PX); */
+    }
+    to {
+        background-color: lime;
+        transform: translate(300PX);
+    }
+}

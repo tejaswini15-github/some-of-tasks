@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    margin: 10px;
+}
+@media screen and (width < 700px){
+    .container{
+      padding: 10px;
+      background-color: palegreen
+   }
+}
+@media screen and (width >=700px) {
+    .container {
+        padding: 30px;
+        background-color: plum;
+    }
+}

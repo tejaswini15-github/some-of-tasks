@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    padding: 10px;
+}
+span {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    padding: 20px;
+}
+.lab-icon {
+    width: 30px;
+    height: 30px;
+}
+.symbol {
+    width: 30px;
+    height: 30px;
+    margin-top: -4px;
+    border-radius: 30px;
+    font-size: 20px;
+}
+.apps-outline {
+    color: black;
+    font-size: 25px;
+}
+.gmail ,
+.images {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.gmail:hover {
+    text-decoration: underline;
+}
+.images:hover {
+    text-decoration: underline;
+}
+.lab-icon:hover {
+    background-color: lightgray;
+    border-radius: 80px;
+}
+.apps-outline:hover {
+    background-color: lightgray;
+    border-radius: 80px;
+}
+.symbol:hover {
+    background-color: lightgray;
+    border-radius: 80px;
+}
+.google {
+    width: 300px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.search-bar {
+    width: 100px;
+    height: 40px;
+    position: static;
+    top: 48%;
+    left: 560px;
+} 
+.mic {
+    width: 35px;
+    position: absolute;
+    top: 51.5%;
+    right: 420px;
+    z-index: 9999;
+    cursor: pointer;
+    transform: translate(-50%,-50%);
+}
+.lens {
+    width: 28px;
+    position: absolute;
+    top: 51.3%;
+    right: 400px;
+    z-index: 9999;
+    transform: translate(-50%,-50%);
+}
+.google-box {
+    position: absolute;
+    width: 40%;
+    height: 50px;
+    top: 335px;
+    border: 1px solid black;
+    right: 400px;
+    border-radius: 50px;
+    padding: 20px;
+    outline: none;
+    box-shadow: 5px 5px 5px black;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* .submit-button {
+    position: relative;
+    top: 100px;
+    text-align: center;
+} */
+.search-icon {
+    position: absolute;
+    z-index: 1;
+    font-size: 21px;
+    top: 332px;
+    left: 33%;
+    color: #777;
+    width: 60px;
+}
+@media screen and (width < 600px){
+    nav {
+        padding: 3px;
+    }
+    span {
+        gap: 10px;
+        font-size: 10px;
+    }
+    .google {
+        width: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .search-bar {
+        width: 80%; 
+        height: 35px; 
+        top: 48%; 
+        left: 50%;
+        transform: translate(-50% -50%);
+    }
+    .mic {
+        right: 8%; 
+        top: 51.2%;
+    }
+    .lens {
+        right: 4%; 
+        top: 51%;
+    }
+    .google-box {
+        width: 90%; 
+        right: 5%; 
+        padding: 15px; 
+    }
+    .search-icon {
+        left: 2%; 
+        top: 47%; 
+    }
+    .apps-outline, .gmail, .images {
+        font-size: 15px; 
+    }
+
+    .lab-icon, .symbol {
+        width: 22px; 
+        height: 19px;
+    }
+}
+
+/* .button {
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    margin: 10px;
+    color: #4e4d4d;
+    background: #ebe8e8;
+    position: absolute;
+    top: 210px;
+    left: 450px;
+}
+.button:hover {
+    background: #ede8e8;
+    color: black;
+    box-shadow: 0 0 2px #000;
+} */
+/* @media screen and (width < 600px){
+    nav {
+      display: none;
+   }
+   .icon {
+      display: inline-block;
+   } */

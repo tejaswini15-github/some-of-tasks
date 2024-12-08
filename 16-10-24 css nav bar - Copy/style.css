@@ -1,0 +1,33 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1 rem;
+    padding: 10px;
+    font-size: 25px;
+    background-color: beige;  
+}
+ul  {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    gap: 3rem;
+    text-decoration: none;
+}    
+nav li a{
+    text-decoration: none;
+}
+nav div:hover {
+    background-color: #c7bcbc;
+}
+nav li a:hover {
+    background-color: #c7bcbc;
+    transition: all 0.4 ease;
+}
+
+   

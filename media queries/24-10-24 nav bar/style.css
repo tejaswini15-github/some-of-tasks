@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(https://img.freepik.com/free-photo/mother-teaching-little-boy-how-paint-eggs-easter_23-2148452204.jpg?t=st=1729779740~exp=1729783340~hmac=27ebedd15d776a212f4cb269ea01d75aa80110110f0527e9e7d2cc0045d979a6&w=996);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+    position: relative;
+}
+#checkbox {
+    display: none;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+} 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    font-size: 1.8rem;
+    padding: 10px;
+    top: 0;
+    position: sticky;
+    top: 0;
+}
+nav {
+    display: flex;
+    gap:50px;
+    justify-content: flex-end;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+}
+img {
+    padding: 10px;
+}
+.logo {
+    font-size: 2rem;
+}
+.icon{
+    font-size: 2rem;
+    display: none;
+} 
+.homepage:hover {
+    background-color: pink;
+}
+.about-us:hover {
+    background-color: pink;
+}
+.landing:hover {
+    background-color: pink;
+}
+.faq:hover {
+    background-color: pink;
+}
+.contact-us {
+    background-color: pink;
+}
+@media screen and (width < 600px){
+    nav {
+      display: none;
+   }
+   .icon {
+      display: inline-block;
+   }
+   .card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%); 
+     /* max-width: 50%;*/
+    }
+    .head  {
+        font-size: 16px;
+    }
+    .button  {
+        font-size: 14px; 
+        margin-top: 20px;  
+       /* max-width: 50%;*/
+       height: 40px;
+    }
+    p ,
+    span {
+        font-size: 14px;
+    }
+    body {
+      background-size: cover; 
+     /* background-position: center;*/  
+   }
+   #checkbox:checked+nav {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 65px;
+    right: 0;
+    align-items: center;
+    font-size: 1.8rem;
+    background-color: #eee;
+    gap: 20px;
+    width: 100%;
+    height: 300px;
+    transition: 0.5 ease;
+  }
+}    
+.card {
+    text-align: center;
+    border-radius:50px;
+    padding: 20px;
+    background-color: white;
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-size: 25px;
+    padding: 40px;
+}
+.para {
+    margin-top: 30px;
+    font-size: 15px;
+    color: rgb(65, 58, 58);
+}
+.word {
+    text-decoration: underline orangered;
+}
+.ion {
+    color: orangered;
+    margin-top: 10px;
+}
+.button {
+    height: 50px;
+    width: 230px;
+    background-color: orangered;
+    color: white;
+    border-radius: 100px;
+   /* margin-top: 50px;*/
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

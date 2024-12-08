@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    padding: 10px;
+    transition: 0.4s ease;
+}
+.btn:hover {
+    padding-left: 40px ;
+    padding-right: 40px;
+    /* border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; */
+}

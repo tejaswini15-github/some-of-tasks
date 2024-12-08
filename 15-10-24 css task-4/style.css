@@ -1,0 +1,46 @@
+* {
+    font-family: Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+header {
+    height: 60px;
+    text-align: center;
+    color: rgb(241, 217, 63);
+    background-color: rgb(74, 71, 19);
+}
+section {
+    height: 2000px;
+}
+.summary1 {
+    height: 50px;
+    padding: 30px;
+    position: sticky;
+    top: 0;
+    font-size: 25px;
+    color: white;
+    background-color: #2cfc03;
+    text-align: center;
+    margin-top: 0px;
+    justify-content: center;
+}
+.summary2 {
+    height: 50px;
+    padding: 30px;
+    font-size: 25px;
+    position: sticky;
+    top: 0;
+    color: white;
+    background-color: #8a414f;
+    text-align: center;
+    margin-top: 0px;
+    justify-content: center;
+}
+.p {
+    text-align: justify;
+    padding: 10px;
+}
